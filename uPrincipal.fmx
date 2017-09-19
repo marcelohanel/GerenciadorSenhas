@@ -1,0 +1,1581 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Gerenciador de Senhas'
+  ClientHeight = 775
+  ClientWidth = 480
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 480.000000000000000000
+    Size.Height = 775.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = None
+    object tabPrincipal: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabPrincipal'
+      object ToolBar1: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Grupos'
+        end
+        object btnSair_tabPrincipal: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'stoptoolbutton'
+          Text = 'btnSair_tabPrincipal'
+          OnClick = btnSair_tabPrincipalClick
+        end
+        object btnSobre_tabPrincipal: TSpeedButton
+          Align = Right
+          Position.X = 384.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'infotoolbutton'
+          Text = 'Go to tabSobre'
+          OnClick = btnSobre_tabPrincipalClick
+        end
+        object btnConfig_tabPrincipal: TSpeedButton
+          Align = Right
+          Position.X = 432.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'detailstoolbutton'
+          Text = 'Cnfigura'#231#245'es'
+          OnClick = btnConfig_tabPrincipalClick
+        end
+      end
+      object ToolBar2: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnAdicionar_tabPrincipal: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          Text = 'Adicionar'
+          OnClick = btnAdicionar_tabPrincipalClick
+        end
+        object btnAlterar_tabPrincipal: TSpeedButton
+          Align = Left
+          Position.X = 48.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'composetoolbutton'
+          Text = 'Go to tabAlterar'
+          OnClick = btnAlterar_tabPrincipalClick
+        end
+        object btnApagar_tabPrincipal: TSpeedButton
+          Align = Left
+          Position.X = 96.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'Apagar'
+          OnClick = btnApagar_tabPrincipalClick
+        end
+        object btnSenhas_tabPrincipal: TSpeedButton
+          Align = Right
+          Position.X = 407.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Senhas'
+          OnClick = btnSenhas_tabPrincipalClick
+        end
+      end
+      object ListBoxGrupos: TListBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 679.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+      end
+    end
+    object tabAlterarGrupo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabAlterarGrupo'
+      object ToolBar6: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label6: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Alterar Grupo'
+        end
+      end
+      object ToolBar7: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnConfirmar_tabAlterarGrupo: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabAlterarGrupoClick
+        end
+        object btnCancelar_tabAlterarGrupo: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabAlterarGrupoClick
+        end
+      end
+      object Label7: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Nome do Grupo'
+      end
+      object edtNomeGrupo_tabAlterarGrupo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Position.X = 10.000000000000000000
+        Position.Y = 81.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+        object ClearEditButton2: TClearEditButton
+          CanFocus = False
+          Cursor = crArrow
+          Size.Width = 32.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+    object tabSobre: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabSobre'
+      object ToolBar3: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label2: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Sobre o Aplicativo'
+        end
+      end
+      object ToolBar8: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnOK_tabSobre: TSpeedButton
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'OK'
+          OnClick = btnOK_tabSobreClick
+        end
+      end
+      object Label3: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Aplicativo'
+      end
+      object edtAplicativo_tabSobre: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Text = 'Gerenciador de Senhas'
+        Position.X = 10.000000000000000000
+        Position.Y = 81.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+      object Label14: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 123.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Licen'#231'a'
+      end
+      object edtLicenca_tabSobre: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 5
+        Text = 'Pro'
+        Position.X = 10.000000000000000000
+        Position.Y = 146.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+      object Label15: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 188.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Vers'#227'o'
+      end
+      object edtVersao_tabSobre: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 7
+        Text = '1.4.0'
+        Position.X = 10.000000000000000000
+        Position.Y = 211.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+      object Label16: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 253.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Copyright'
+      end
+      object edtCopyright_tabSobre: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 9
+        Text = 'Marcelo Hanel'
+        Position.X = 10.000000000000000000
+        Position.Y = 276.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+      object Label17: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 318.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Contato'
+      end
+      object edtContato_tabSobre: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 11
+        Text = 'hanelmarcelo@gmail.com'
+        Position.X = 10.000000000000000000
+        Position.Y = 341.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+    end
+    object tabAdicionarGrupo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabAdicionarGrupo'
+      object ToolBar4: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label5: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'Adicionar Grupo'
+        end
+      end
+      object ToolBar5: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnConfirmar_tabAdicionarGrupo: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabAdicionarGrupoClick
+        end
+        object btnCancelar_tabAdicionarGrupo: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabAdicionarGrupoClick
+        end
+      end
+      object Label4: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Nome do Grupo'
+      end
+      object edtNomeGrupo_tabAdicionarGrupo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Position.X = 10.000000000000000000
+        Position.Y = 81.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+        object ClearEditButton1: TClearEditButton
+          CanFocus = False
+          Cursor = crArrow
+          Size.Width = 32.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+    object tabExcluirGrupo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabExcluirGrupo'
+      object ToolBar9: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label9: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Excluir Grupo'
+        end
+      end
+      object Label10: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxitemlabel'
+        TextSettings.WordWrap = False
+        Text = 'Deseja realmente excluir o grupo ?'
+      end
+      object ToolBar10: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object btnConfirmar_tabExcluirGrupo: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabExcluirGrupoClick
+        end
+        object btnCancelar_tabExcluirGrupo: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabExcluirGrupoClick
+        end
+      end
+      object Label8: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 104.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Grupo'
+      end
+      object edtNomeGrupo_tabExcluirGrupo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 4
+        Position.X = 10.000000000000000000
+        Position.Y = 127.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+    end
+    object tabSenhas: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabSenhas'
+      object ToolBar11: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblTitulo_tabSenhas: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Senhas'
+        end
+        object btnVoltar_tabSenhas: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'priortoolbutton'
+          Text = 'btnVoltar_tabSenhas'
+          OnClick = btnVoltar_tabSenhasClick
+        end
+      end
+      object ToolBar12: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnAdicionar_tabSenhas: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          Text = 'Adicionar'
+          OnClick = btnAdicionar_tabSenhasClick
+        end
+        object btnAlterar_tabSenhas: TSpeedButton
+          Align = Left
+          Position.X = 48.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'composetoolbutton'
+          Text = 'Go to tabAlterar'
+          OnClick = btnAlterar_tabSenhasClick
+        end
+        object btnExcluir_tabSenhas: TSpeedButton
+          Align = Left
+          Position.X = 96.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'trashtoolbutton'
+          Text = 'Apagar'
+          OnClick = btnExcluir_tabSenhasClick
+        end
+      end
+      object ListBoxSenhas: TListBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 679.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        object MetropolisUIListBoxItem1: TMetropolisUIListBoxItem
+          ClipChildren = True
+          StyledSettings = [Family, Size, FontColor, Other]
+          Size.Width = 480.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxitemnodetail'
+          TabOrder = 0
+          Title = 'Titulo'
+          SubTitle = 'Usuario: Senha'
+          Description = ''
+        end
+      end
+    end
+    object tabAdicionarSenha: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabAdicionarSenha'
+      object ToolBar13: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label12: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Adicionar Senha'
+        end
+      end
+      object ToolBar14: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnConfirmar_tabAdicionarSenha: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabAdicionarSenhaClick
+        end
+        object btnCancelar_tabAdicionarSenha: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabAdicionarSenhaClick
+        end
+      end
+      object ListBoxAdicionarSenha: TListBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 679.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        object ListBoxItemAdicionarSenha: TListBoxItem
+          Selectable = False
+          Size.Width = 480.000000000000000000
+          Size.Height = 449.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label11: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'T'#237'tulo'
+          end
+          object edtTitulo_tabAdicionarSenha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 1
+            Position.X = 10.000000000000000000
+            Position.Y = 33.000000000000000000
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+            object ClearEditButton3: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Label13: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 75.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Usu'#225'rio'
+          end
+          object edtUsuario_tabAdicionarSenha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            Position.X = 10.000000000000000000
+            Position.Y = 98.000000000000000000
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+            object ClearEditButton4: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Label18: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 140.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Senha'
+          end
+          object edtSenha_tabAdicionarSenha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 5
+            Position.X = 10.000000000000000000
+            Position.Y = 163.000000000000000000
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+            object ClearEditButton5: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Label19: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 205.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Grupo'
+          end
+          object cbxGrupo_tabAdicionarSenha: TComboBox
+            Align = Top
+            DisableFocusEffect = False
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 228.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+          end
+          object Label20: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 270.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Observa'#231#227'o'
+          end
+          object mmoObservacao_tabAdicionarSenha: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            Align = Client
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 146.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+          end
+        end
+      end
+    end
+    object tabExluirSenha: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabExluirSenha'
+      object ToolBar15: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object Label21: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxitemlabel'
+        TextSettings.WordWrap = False
+        Text = 'Deseja realmente excluir a senha ?'
+      end
+      object Label22: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 104.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'T'#237'tulo'
+      end
+      object edtTitulo_tabExcluirSenha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Position.X = 10.000000000000000000
+        Position.Y = 127.000000000000000000
+        Enabled = False
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+      end
+      object ToolBar16: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object btnConfirmar_tabExcluirSenha: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabExcluirSenhaClick
+        end
+        object btnCancelar_tabExcluirSenha: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabExcluirSenhaClick
+        end
+      end
+    end
+    object tabAlterarSenha: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabAlterarSenha'
+      object ToolBar17: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label23: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Alterar Senha'
+        end
+      end
+      object ToolBar18: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnConfirmar_tabAlterarSenha: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabAlterarSenhaClick
+        end
+        object btnCancelar_tabAlterarSenha: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabAlterarSenhaClick
+        end
+      end
+      object ListBoxAlteraSenha: TListBox
+        Align = Client
+        Size.Width = 480.000000000000000000
+        Size.Height = 679.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        object ListBoxItemAlteraSenha: TListBoxItem
+          Selectable = False
+          Size.Width = 480.000000000000000000
+          Size.Height = 480.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label24: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'T'#237'tulo'
+          end
+          object edtTitulo_tabAlterarSenha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 1
+            Position.X = 10.000000000000000000
+            Position.Y = 33.000000000000000000
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+            object ClearEditButton6: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Label25: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 75.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Usu'#225'rio'
+          end
+          object edtUsuario_tabAlterarSenha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            Position.X = 10.000000000000000000
+            Position.Y = 98.000000000000000000
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+            object ClearEditButton7: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Label26: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 140.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Senha'
+          end
+          object edtSenha_tabAlterarSenha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 5
+            Position.X = 10.000000000000000000
+            Position.Y = 163.000000000000000000
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+            object ClearEditButton8: TClearEditButton
+              CanFocus = False
+              Cursor = crArrow
+              Size.Width = 32.000000000000000000
+              Size.Height = 28.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object Label27: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 205.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Grupo'
+          end
+          object cbxGrupo_tabAlterarSenha: TComboBox
+            Align = Top
+            DisableFocusEffect = False
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 228.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+          end
+          object Label28: TLabel
+            Align = Top
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 270.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            Text = 'Observa'#231#227'o'
+          end
+          object mmoObservacoes_tabAlterarSenha: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            Align = Client
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 460.000000000000000000
+            Size.Height = 177.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+          end
+        end
+      end
+    end
+    object tabConfig: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabConfig'
+      object ToolBar19: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label29: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Configura'#231#245'es'
+        end
+      end
+      object ToolBar20: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnOK_tabConfig: TSpeedButton
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'OK'
+          OnClick = btnOK_tabConfigClick
+        end
+      end
+      object btnExportar_tabConfig: TSpeedButton
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'buttonstyle'
+        Text = 'Exportar Dados'
+        OnClick = btnExportar_tabConfigClick
+      end
+      object btnImportar_tabConfig: TSpeedButton
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 118.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'buttonstyle'
+        Text = 'Importar Dados'
+        OnClick = btnImportar_tabConfigClick
+      end
+      object btnSenha: TSpeedButton
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 178.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'buttonstyle'
+        Text = 'Definir Senha'
+        OnClick = btnSenhaClick
+      end
+    end
+    object tabLogin: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabLogin'
+      object ToolBar23: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object btnConfirmar_tabLogin: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabLoginClick
+        end
+        object btnCancelar_tabLogin: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabLoginClick
+        end
+      end
+      object ToolBar24: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label32: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Login'
+        end
+      end
+      object Label33: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Informe a Senha de Acesso'
+      end
+      object edtSenha_tabLogin: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Password = True
+        Position.X = 10.000000000000000000
+        Position.Y = 81.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+        object ClearEditButton11: TClearEditButton
+          CanFocus = False
+          Cursor = crArrow
+          Size.Width = 32.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+    object tabDefinirSenha: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'tabDefinirSenha'
+      object ToolBar21: TToolBar
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lblDefinirSenha: TLabel
+          Align = Contents
+          Size.Width = 480.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Definir Senha'
+        end
+      end
+      object ToolBar22: TToolBar
+        Align = Bottom
+        Position.Y = 727.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnConfirmar_tabDefinirSenha: TSpeedButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirmar'
+          OnClick = btnConfirmar_tabDefinirSenhaClick
+        end
+        object btnCancelar_tabDefinirSenha: TSpeedButton
+          Align = Right
+          Margins.Right = 5.000000000000000000
+          Position.X = 370.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'deletetoolbutton'
+          Text = 'Cancelar'
+          OnClick = btnCancelar_tabDefinirSenhaClick
+        end
+      end
+      object Label30: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Informe a Nova Senha'
+      end
+      object edtSenha_tabDefinirSenha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Position.X = 10.000000000000000000
+        Position.Y = 81.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+        object ClearEditButton9: TClearEditButton
+          CanFocus = False
+          Cursor = crArrow
+          Size.Width = 32.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+      object Label31: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 123.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'listboxheaderlabel'
+        Text = 'Confirme a Nova Senha'
+      end
+      object edtConfirmar_tabDefinirSenha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 5
+        Position.X = 10.000000000000000000
+        Position.Y = 146.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 460.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        KillFocusByReturn = True
+        object ClearEditButton10: TClearEditButton
+          CanFocus = False
+          Cursor = crArrow
+          Size.Width = 32.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 304
+    Top = 296
+    object cngPrincipal: TChangeTabAction
+      Tab = tabPrincipal
+    end
+    object cngSobre: TChangeTabAction
+      Tab = tabSobre
+    end
+    object cngAdicionarGrupo: TChangeTabAction
+      Tab = tabAdicionarGrupo
+    end
+    object cngAlterarGrupo: TChangeTabAction
+      Tab = tabAlterarGrupo
+    end
+    object cngExcluirGrupo: TChangeTabAction
+      Tab = tabExcluirGrupo
+    end
+    object cngSenhas: TChangeTabAction
+      Tab = tabSenhas
+    end
+    object cngAdicionarSenha: TChangeTabAction
+      Tab = tabAdicionarSenha
+    end
+    object cngExcluirSenha: TChangeTabAction
+      Tab = tabExluirSenha
+    end
+    object cngAlterarSenha: TChangeTabAction
+      Tab = tabAlterarSenha
+    end
+    object cngConfig: TChangeTabAction
+      Tab = tabConfig
+    end
+    object cngLogin: TChangeTabAction
+      Tab = tabLogin
+    end
+    object cngDefinirSenha: TChangeTabAction
+      Tab = tabDefinirSenha
+    end
+  end
+  object bdDados: TSQLConnection
+    ConnectionName = 'GerenciadorSenhas'
+    DriverName = 'SQLite'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=SQLite'
+      'DriverUnit=Data.DbxSqlite'
+      
+        'DriverPackageLoader=TDBXSqliteDriverLoader,DBXSqliteDriver170.bp' +
+        'l'
+      
+        'MetaDataPackageLoader=TDBXSqliteMetaDataCommandFactory,DbxSqlite' +
+        'Driver170.bpl'
+      'FailIfMissing=False'
+      'Database=C:\jedi\GerenciadorSenhasPro\database.db3')
+    AfterConnect = bdDadosAfterConnect
+    BeforeConnect = bdDadosBeforeConnect
+    Left = 231
+    Top = 289
+  end
+end
